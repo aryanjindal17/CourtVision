@@ -148,7 +148,7 @@ export default function HowItWorksPage() {
                 What positions do you coach?
               </h3>
               <p className="text-slate-600">
-                All of them! Our coaches have played and coached every position at high levels. We specialize in position-specific technique and strategy.
+                All of them. Whether you're a setter, libero, outside, or middle, we tailor the breakdown to your role on the court.
               </p>
             </div>
           </div>

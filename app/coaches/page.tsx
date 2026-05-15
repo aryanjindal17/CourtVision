@@ -3,28 +3,28 @@ import CTASection from '@/components/CTASection'
 
 const coaches = [
   {
-    name: 'Sarah Martinez',
-    role: 'Lead Performance Coach',
-    bio: 'Former D1 setter at UCLA with 8+ years coaching experience. Specializes in game IQ development and decision-making under pressure.',
+    name: 'Aryan',
+    role: 'Head Coach',
+    bio: 'Current U17 head coach with experience coaching both boys and girls programs. Brings a deep understanding of player development at the club level and a sharp eye for film analysis.',
     credentials: [
-      'NCAA Division I Player (UCLA)',
-      'USA Volleyball CAP Level II Certified',
-      'Coached 15+ players to collegiate programs',
-      'Former U.S. Junior National Team member'
+      'Current U17 Head Coach',
+      'Coaches both boys and girls programs',
+      'Specializes in film-based player development',
+      'Experienced in identifying and correcting technical habits'
     ],
-    image: '/coaches/sarah.jpg' // Placeholder
+    image: '/coaches/aryan.jpg'
   },
   {
-    name: 'Marcus Chen',
-    role: 'Technical Skills Specialist',
-    bio: 'Professional beach volleyball player and biomechanics expert. Focuses on technique optimization and injury prevention through proper form.',
+    name: 'Halle',
+    role: 'Skills Coach',
+    bio: 'Former college volleyball player who has trained alongside Olympic-level athletes. Brings high-level technical knowledge and a player-first approach to every session.',
     credentials: [
-      'AVP Professional Tour Player',
-      'B.S. in Kinesiology, Stanford University',
-      'CSCS Certified Strength & Conditioning Specialist',
-      'Video analysis expert with 1000+ sessions completed'
+      'Former college volleyball player',
+      'Trained with Olympic-level athletes',
+      'Deep understanding of high-level technique',
+      'Focused on position-specific skill development'
     ],
-    image: '/coaches/marcus.jpg' // Placeholder
+    image: '/coaches/halle.jpg'
   }
 ]
 
@@ -38,7 +38,7 @@ export default function CoachesPage() {
             Meet Your Coaches
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Learn from elite athletes and certified coaches who combine high-level playing experience with proven teaching expertise.
+            Coaches who have played and coached at competitive levels and are passionate about helping players improve through personalized film analysis.
           </p>
         </div>
       </section>

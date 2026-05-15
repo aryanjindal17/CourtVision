@@ -32,8 +32,8 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: 'Expert Coaches',
-    description: 'Learn from former D1 athletes and certified coaches who have played and coached at the highest levels.'
+    title: 'Experienced Coaches',
+    description: 'Learn from coaches who have played and coached at competitive levels and know what it takes to develop real players.'
   }
 ]
 
