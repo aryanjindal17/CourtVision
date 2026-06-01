@@ -36,7 +36,7 @@ export default function TestimonialsPreview() {
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {featuredTestimonials.map((t, index) => (
-            <TestimonialCard key={index} name={t.name} position={t.position} quote={t.quote} videoSrc={t.videoSrc} />
+            <TestimonialCard key={index} name={t.name} quote={t.quote} videoSrc={t.videoSrc} />
           ))}
         </div>
 
