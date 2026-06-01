@@ -1,54 +1,32 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const testimonials = [
   {
     name: "Zak",
     quote: "I never left a single session without a notepad full of things that I needed to work on.",
     videoSrc: "/videos/testimonial-1.mp4",
+    thumbSrc: "/videos/testimonial-1-thumb.jpg",
   },
   {
     name: "Knuts",
     quote: "I've had coaches in my life that haven't paid as much attention to me as these two have.",
     videoSrc: "/videos/testimonial-2.mp4",
-    thumbSize: "85%",
-    thumbPosition: "center center",
+    thumbSrc: "/videos/testimonial-2-thumb.jpg",
   },
   {
     name: "Josh — Div 2 Player, UK",
     quote: "They've both helped me develop my skills all around as a player.",
     videoSrc: "/videos/testimonial-3.mp4",
-    thumbSize: "85%",
-    thumbPosition: "center 65%",
+    thumbSrc: "/videos/testimonial-3-thumb.jpg",
   },
 ]
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0)
   const [playing, setPlaying] = useState(false)
-  const [thumbnails, setThumbnails] = useState<Record<number, string>>({})
-
-  useEffect(() => {
-    testimonials.forEach((t, i) => {
-      if (!t.videoSrc) return
-      const video = document.createElement('video')
-      video.src = t.videoSrc
-      video.currentTime = 1
-      video.addEventListener('seeked', () => {
-        const canvas = document.createElement('canvas')
-        canvas.width = video.videoWidth
-        canvas.height = video.videoHeight
-        const ctx = canvas.getContext('2d')
-        if (ctx) {
-          ctx.drawImage(video, 0, 0)
-          setThumbnails(prev => ({ ...prev, [i]: canvas.toDataURL() }))
-        }
-      })
-      video.load()
-    })
-  }, [])
 
   const goTo = (i: number) => {
     setCurrent(i)
@@ -123,7 +101,7 @@ export default function HeroSection() {
                 ) : (
                   <div
                     className="absolute inset-0 flex items-center justify-center cursor-pointer group bg-gradient-to-br from-slate-800 to-slate-900"
-                    style={thumbnails[current] ? { backgroundImage: `url(${thumbnails[current]})`, backgroundSize: testimonial.thumbSize ?? 'cover', backgroundPosition: testimonial.thumbPosition ?? 'center' } : {}}
+                    style={testimonial.thumbSrc ? { backgroundImage: `url(${testimonial.thumbSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
                     onClick={() => testimonial.videoSrc && setPlaying(true)}
                   >
                     {/* Play Button */}

@@ -1,59 +1,58 @@
 import TestimonialCard from '@/components/TestimonialCard'
-import VideoTestimonial from '@/components/VideoTestimonial'
 import CTASection from '@/components/CTASection'
-
-const testimonials = [
-  {
-    name: 'Emma L.',
-    level: 'U17 Club Player',
-    quote: 'After just 3 sessions, I went from inconsistent passing to starting libero. The film breakdown showed me exactly what I was doing wrong with my platform angle.',
-    result: 'Made varsity starting lineup'
-  },
-  {
-    name: 'Jordan M.',
-    level: 'High School Setter',
-    quote: 'CourtVision helped me get recruited to my dream D2 school. The coaches gave me specific metrics to improve and tracked my progress over 6 months.',
-    result: 'Committed to D2 program'
-  },
-  {
-    name: 'Alex K.',
-    level: 'U15 Outside Hitter',
-    quote: 'I was stuck in the same rotation for months. One session analyzing my approach footwork changed everything. Now I\'m starting and my kill percentage doubled.',
-    result: 'Kill % increased from 22% to 44%'
-  },
-  {
-    name: 'Taylor R.',
-    level: 'Club Middle Blocker',
-    quote: 'The personalized feedback was eye-opening. They caught technical issues my club coach never noticed. My blocking efficiency went up 30% in one season.',
-    result: '30% improvement in blocking'
-  },
-  {
-    name: 'Morgan S.',
-    level: 'High School Captain',
-    quote: 'Best investment I made in my game. The Zoom sessions felt like having a personal coach review every detail. I finally understood my decision-making patterns.',
-    result: 'Named team captain'
-  },
-  {
-    name: 'Riley P.',
-    level: 'U16 Defensive Specialist',
-    quote: 'My parents were skeptical at first, but after seeing my stats improve every tournament, they\'re believers. The coaches genuinely care about your development.',
-    result: 'Dig average improved 40%'
-  }
-]
 
 const videoTestimonials = [
   {
-    name: 'Casey Johnson',
-    level: 'Committed to Penn State',
-    thumbnailUrl: '/testimonials/casey-thumb.jpg',
-    videoUrl: '/testimonials/casey-video.mp4'
+    name: 'Zak',
+    quote: 'I never left a single session without a notepad full of things that I needed to work on.',
+    videoSrc: '/videos/testimonial-1.mp4',
+    thumbSrc: '/videos/testimonial-1-thumb.jpg',
   },
   {
-    name: 'Devon Williams',
-    level: 'U18 National Team Tryout',
-    thumbnailUrl: '/testimonials/devon-thumb.jpg',
-    videoUrl: '/testimonials/devon-video.mp4'
-  }
+    name: 'Knuts',
+    quote: "I've had coaches in my life that haven't paid as much attention to me as these two have.",
+    videoSrc: '/videos/testimonial-2.mp4',
+    thumbSrc: '/videos/testimonial-2-thumb.jpg',
+  },
+  {
+    name: 'Josh',
+    quote: "They've both helped me develop my skills all around as a player.",
+    videoSrc: '/videos/testimonial-3.mp4',
+    thumbSrc: '/videos/testimonial-3-thumb.jpg',
+  },
+]
+
+const writtenTestimonials = [
+  {
+    name: 'Dante W.',
+    position: 'Setter',
+    quote: "I've never had someone pay that close attention to my decision-making before. It changed how I see the game.",
+  },
+  {
+    name: 'Priya N.',
+    position: 'Opposite',
+    quote: 'Two sessions in and I already knew more about my attacking patterns than I had learned in two years of club.',
+  },
+  {
+    name: 'Cam O.',
+    position: 'Defensive Specialist',
+    quote: "They don't sugarcoat anything, which is exactly what I needed. Honest, specific, and actually useful feedback.",
+  },
+  {
+    name: 'Marcus R.',
+    position: 'Outside Hitter',
+    quote: 'The way they break down film made me see my approach footwork in a way no coach ever had before.',
+  },
+  {
+    name: 'Sofia M.',
+    position: 'Libero',
+    quote: "I had no idea how many small positioning habits were costing me until we sat down and watched the film together.",
+  },
+  {
+    name: 'Tyler B.',
+    position: 'Middle Blocker',
+    quote: 'Every session I walked away with a clear list of things to fix. The detail they go into is something else.',
+  },
 ]
 
 export default function TestimonialsPage() {
@@ -77,9 +76,9 @@ export default function TestimonialsPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
             Player Stories
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {videoTestimonials.map((video, index) => (
-              <VideoTestimonial key={index} {...video} />
+          <div className="grid md:grid-cols-3 gap-8">
+            {videoTestimonials.map((t, index) => (
+              <TestimonialCard key={index} name={t.name} quote={t.quote} videoSrc={t.videoSrc} thumbSrc={t.thumbSrc} />
             ))}
           </div>
         </div>
@@ -92,8 +91,8 @@ export default function TestimonialsPage() {
             What Players Are Saying
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
+            {writtenTestimonials.map((t, index) => (
+              <TestimonialCard key={index} name={t.name} position={t.position} quote={t.quote} />
             ))}
           </div>
         </div>

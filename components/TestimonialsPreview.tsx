@@ -3,23 +3,20 @@ import TestimonialCard from './TestimonialCard'
 
 const featuredTestimonials = [
   {
-    name: 'Emma L.',
-    level: 'U17 Club Player',
-    quote: 'After just 3 sessions, I went from inconsistent passing to starting libero. The film breakdown showed me exactly what I was doing wrong with my platform angle.',
-    result: 'Made varsity starting lineup'
+    name: 'Zak',
+    quote: 'I never left a single session without a notepad full of things that I needed to work on.',
+    videoSrc: '/videos/testimonial-1.mp4',
   },
   {
-    name: 'Jordan M.',
-    level: 'High School Setter',
-    quote: 'CourtVision helped me get recruited to my dream D2 school. The coaches gave me specific metrics to improve and tracked my progress over 6 months.',
-    result: 'Committed to D2 program'
+    name: 'Knuts',
+    quote: "I've had coaches in my life that haven't paid as much attention to me as these two have.",
+    videoSrc: '/videos/testimonial-2.mp4',
   },
   {
-    name: 'Alex K.',
-    level: 'U15 Outside Hitter',
-    quote: 'I was stuck in the same rotation for months. One session analyzing my approach footwork changed everything.',
-    result: 'Kill % increased 22% → 44%'
-  }
+    name: 'Josh',
+    quote: "They've both helped me develop my skills all around as a player.",
+    videoSrc: '/videos/testimonial-3.mp4',
+  },
 ]
 
 export default function TestimonialsPreview() {
@@ -38,8 +35,8 @@ export default function TestimonialsPreview() {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {featuredTestimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
+          {featuredTestimonials.map((t, index) => (
+            <TestimonialCard key={index} name={t.name} position={t.position} quote={t.quote} videoSrc={t.videoSrc} />
           ))}
         </div>
 
