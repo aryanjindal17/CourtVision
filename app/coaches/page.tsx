@@ -12,7 +12,7 @@ const coaches = [
       'Specializes in film-based player development',
       'Experienced in identifying and correcting technical habits'
     ],
-    image: '/coaches/aryan.jpg'
+    image: '/coaches/aryan.jpeg'
   },
   {
     name: 'Halle',
@@ -24,7 +24,7 @@ const coaches = [
       'Deep understanding of high-level technique',
       'Focused on position-specific skill development'
     ],
-    image: '/coaches/halle.jpg'
+    image: '/coaches/halle.jpeg'
   }
 ]
 
