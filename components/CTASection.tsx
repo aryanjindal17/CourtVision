@@ -17,7 +17,9 @@ export default function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/contact"
+            href="https://calendly.com/aryanjindal17/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
           >
             Book Your Free Call

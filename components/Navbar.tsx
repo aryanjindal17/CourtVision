@@ -39,7 +39,9 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="https://calendly.com/aryanjindal17/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-2.5 rounded-lg transition-colors"
             >
               Book Free Call
@@ -79,7 +81,9 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="https://calendly.com/aryanjindal17/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >

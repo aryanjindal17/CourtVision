@@ -21,7 +21,7 @@ const featuredTestimonials = [
 
 export default function TestimonialsPreview() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section id="testimonials" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

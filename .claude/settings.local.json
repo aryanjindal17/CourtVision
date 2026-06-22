@@ -6,7 +6,12 @@
       "Bash(powershell -Command \"Get-ChildItem -Recurse -File | Select-Object -ExpandProperty FullName\")",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(ffprobe *)",
+      "PowerShell(ffprobe *)",
+      "PowerShell(git *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Local_User\\\\Documents\\\\CourtVision\" -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 50 | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Local_User\\\\Documents\\\\CourtVision\" -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.Extension -match '\\\\.\\(tsx|ts|jsx|js\\)$' -and $_.FullName -notmatch '\\\\.next|node_modules' } | ForEach-Object { $_.FullName })"
     ]
   }
 }

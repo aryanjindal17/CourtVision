@@ -53,25 +53,27 @@ export default function HeroSection() {
         backgroundSize: '50px 50px'
       }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Column */}
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Elevate Your Volleyball Game with
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light mt-2">
                 Personalized Film Coaching
               </span>
             </h1>
 
-            <p className="text-lg text-gray-400 mb-10 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-400 mb-7 md:mb-10 leading-relaxed">
               Send us your game footage and we&apos;ll watch it with you, breaking down every play, rep, and decision together on Zoom so you know exactly what to fix.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
-                href="/contact"
+                href="https://calendly.com/aryanjindal17/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
               >
                 Book a Free Intro Call
@@ -79,6 +81,12 @@ export default function HeroSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
+              <a
+                href="#testimonials"
+                className="lg:hidden inline-flex items-center justify-center border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 rounded-lg transition-all hover:bg-white/5"
+              >
+                See What Players Say
+              </a>
             </div>
           </div>
 
