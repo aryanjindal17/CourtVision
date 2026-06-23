@@ -15,7 +15,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-white">CourtVision</span>
+              <span className="text-xl font-bold text-white">VolleyFilm</span>
             </div>
             <p className="text-sm text-slate-400 max-w-md">
               Elite volleyball coaching through personalized film analysis. Level up your game with expert feedback and measurable results.
@@ -59,8 +59,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:hello@courtvision.com" className="text-sm hover:text-white transition">
-                  hello@courtvision.com
+                <a href="mailto:hello@volleyfilm.com" className="text-sm hover:text-white transition">
+                  hello@volleyfilm.com
                 </a>
               </li>
               <li>
@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-slate-400">
-              &copy; {currentYear} CourtVision. All rights reserved.
+              &copy; {currentYear} VolleyFilm. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="#" className="text-sm text-slate-400 hover:text-white transition">

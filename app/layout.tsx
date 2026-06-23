@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'CourtVision - Elite Volleyball Film Analysis & Coaching',
+  title: 'VolleyFilm - Elite Volleyball Film Analysis & Coaching',
   description: 'Get personalized volleyball coaching through professional film analysis. Submit your game footage and receive expert feedback in live Zoom sessions.',
   keywords: 'volleyball coaching, film analysis, volleyball training, personalized coaching',
 }

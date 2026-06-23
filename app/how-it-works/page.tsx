@@ -9,7 +9,7 @@ const steps = [
     details: [
       'Discuss your volleyball background and goals',
       'Learn about our process and what to expect',
-      'Determine if CourtVision is right for you',
+      'Determine if VolleyFilm is right for you',
       'Get answers to any questions'
     ]
   },
@@ -66,7 +66,7 @@ export default function HowItWorksPage() {
       <section className="bg-gradient-to-b from-slate-50 to-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            How CourtVision Works
+            How VolleyFilm Works
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             A simple, proven process that turns your game footage into actionable feedback and measurable improvement.
