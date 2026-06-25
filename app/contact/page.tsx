@@ -201,14 +201,14 @@ export default function ContactPage() {
           <div className="space-y-4">
             <p className="text-lg">
               <span className="font-semibold text-slate-900">Email:</span>{' '}
-              <a href="mailto:hello@courtvision.com" className="text-primary hover:text-primary-dark transition">
-                hello@courtvision.com
+              <a href="mailto:aryan@volleyfilm.com" className="text-primary hover:text-primary-dark transition">
+                aryan@volleyfilm.com
               </a>
             </p>
             <p className="text-lg">
               <span className="font-semibold text-slate-900">Phone:</span>{' '}
-              <a href="tel:+15551234567" className="text-primary hover:text-primary-dark transition">
-                (555) 123-4567
+              <a href="tel:+14255331417" className="text-primary hover:text-primary-dark transition">
+                425-533-1417
               </a>
             </p>
             <p className="text-slate-600 text-sm mt-6">
