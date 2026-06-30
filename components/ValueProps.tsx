@@ -51,12 +51,12 @@ export default function ValueProps() {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Cards — mobile: swipeable carousel; desktop: 2-col grid */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-3 -mx-4 px-4 pb-2 no-scrollbar md:grid md:grid-cols-2 md:gap-8 md:overflow-visible md:mx-0 md:px-0">
           {values.map((value, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl border border-slate-200 hover:border-primary hover:shadow-lg transition-all group"
+              className="snap-start flex-shrink-0 min-w-[82%] md:min-w-0 bg-white p-8 rounded-xl border border-slate-200 hover:border-primary hover:shadow-lg transition-all group"
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">

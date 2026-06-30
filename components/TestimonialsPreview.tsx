@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import TestimonialCard from './TestimonialCard'
+import { useState, useEffect, useRef } from 'react'
 
 const featuredTestimonials = [
   {
@@ -20,6 +23,41 @@ const featuredTestimonials = [
 ]
 
 export default function TestimonialsPreview() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const container = scrollRef.current
+    if (!container) return
+
+    const observers: IntersectionObserver[] = []
+
+    cardRefs.current.forEach((card, i) => {
+      if (!card) return
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveIndex(i)
+        },
+        { root: container, threshold: 0.5 }
+      )
+      observer.observe(card)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach(o => o.disconnect())
+  }, [])
+
+  const scrollToCard = (index: number) => {
+    const container = scrollRef.current
+    const card = cardRefs.current[index]
+    if (!container || !card) return
+    container.scrollTo({
+      left: container.scrollLeft + card.getBoundingClientRect().left - container.getBoundingClientRect().left,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <section id="testimonials" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -33,10 +71,33 @@ export default function TestimonialsPreview() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        {/* Testimonials — mobile: swipeable carousel; desktop: 3-col grid */}
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-3 -mx-4 px-4 pb-2 no-scrollbar mb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:mx-0 md:px-0 md:mb-12"
+        >
           {featuredTestimonials.map((t, index) => (
-            <TestimonialCard key={index} name={t.name} quote={t.quote} videoSrc={t.videoSrc} />
+            <div
+              key={index}
+              ref={(el) => { cardRefs.current[index] = el }}
+              className="snap-start flex-shrink-0 min-w-[82%] md:min-w-0"
+            >
+              <TestimonialCard name={t.name} quote={t.quote} videoSrc={t.videoSrc} />
+            </div>
+          ))}
+        </div>
+
+        {/* Dot indicators — mobile only */}
+        <div className="flex justify-center gap-2 mb-8 md:hidden">
+          {featuredTestimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => scrollToCard(i)}
+              aria-label={`Go to testimonial ${i + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === activeIndex ? 'w-6 bg-primary' : 'w-2 bg-slate-300'
+              }`}
+            />
           ))}
         </div>
 

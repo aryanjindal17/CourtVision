@@ -36,9 +36,13 @@ export default function HowItWorksPreview() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              {/* Connector Line */}
+              {/* Desktop: horizontal connector to next step */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-slate-200 z-0" />
+              )}
+              {/* Mobile: vertical connector that fills the gap-8 between stacked cards */}
+              {index < steps.length - 1 && (
+                <div className="md:hidden absolute left-1/2 -translate-x-1/2 w-0.5 h-8 bg-slate-200 z-0 top-full" />
               )}
 
               {/* Card */}
